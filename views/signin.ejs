@@ -1,0 +1,56 @@
+<% include ./partials/header %>
+
+  <div class="row">
+    <h1 style="text-align: center">Please Check In</h1>
+    <div style="width: 30%; margin: 25px auto;">
+        <form action="/displays" method="post">
+            <div class="form-group">
+                <h3>Name</h3>
+                <input class="form-control" type="text" name="display[name]">
+            </div>
+            <!-- <div class="form-group">
+                <h3>Phone</h3>
+                <input class="form-control" type="text" name="display[phone]">
+            </div>
+            <div class="form-group">
+                <h3>Email</h3>
+                <input class="form-control" type="email" name="display[email]">
+            </div> -->
+            <div class="form-group">
+                <h3>Services</h3>
+                <input class="form-control whiteSpace" type="text" list="servicesOption1" name="display[service]" placeholder="Click here for service" >
+                <datalist id="servicesOption1">
+                  <option>Regular Pedicure</option>
+                  <option>Deep Clean Pedicure</option>
+                  <option>Spa Pedicure</option>
+                  <option>Gel Pedicure</option>
+                </datalist>
+                <input class="form-control" type="text" list="servicesOption2" name="display[extraservice]" placeholder="Click here for service">
+                <datalist id="servicesOption2">
+                  <option>Regular Pedicure</option>
+                  <option>Deep Clean Pedicure</option>
+                  <option>Spa Pedicure</option>
+                  <option>Gel Pedicure</option>
+                </datalist>
+            </div>
+            <div class="form-group">
+                <h3>Technician</h3>
+                <input class="form-control" type="text" list="techChoice" name="display[tech]" placeholder="Click here to pick your favorite technician">
+                <datalist id="techChoice">
+                  <option>Tech 1</option>
+                  <option>Tech 2</option>
+                  <option>Tech 3</option>
+                  <option>Tech 4</option>
+                </datalist>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-success btn-block">Check In</button>
+            </div>
+        </form>
+        <a href="/displays" class="btn btn-primary">Go Back</a>
+    </div>
+  </div>
+
+</script>
+
+<% include ./partials/footer %>

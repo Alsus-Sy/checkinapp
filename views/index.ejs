@@ -1,0 +1,55 @@
+<% include ./partials/header %>
+
+  <div class="container">
+  <a type="button" class="btn btn-primary" href="displays/signin">Click Here To Check In</a>
+    <div class="panel panel-default">
+    <!-- Default panel contents -->
+      <div class="panel-body">
+       <!-- Table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Service Type</th>
+              <th>Technician</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% displays.forEach(function(display) { %>
+                <tr>
+                <td>
+                  <%= display.name %>           
+                </td>
+                <td>
+                  <%= display.service %>, <%= display.extraservice %>
+                </td>
+                <td>
+                  <%= display.tech %>
+                </td>
+                <td>
+                  <%= display.phone %>
+                </td>
+                <td>
+                  <%= display.email %>
+                </li>                
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+   </div>
+
+<% displays %>
+
+<% include ./partials/footer %>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+body {
+  background: rgb(160, 160, 160);
+}
+
+.btn-primary {
+  margin-bottom: 15px;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.whiteSpace {
+  margin: 10px 0 10px 0;
+}
+
+.display-1 {
+  color: white;
+  padding-left: 10px;
+  display: inline-block;
+}
