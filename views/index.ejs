@@ -1,6 +1,6 @@
 <% include ./partials/header %>
 
-  <a type="button" class="btn btn-primary" href="displays/signin">Click Here To Check In</a>
+  <a type="button" class="btn btn-primary btn-lg" href="displays/signin">Click Here To Check In</a>
     <div class="panel panel-default">
     <!-- Default panel contents -->
       <div class="panel-body">
@@ -11,6 +11,7 @@
               <th>Name</th>
               <th>Service Type</th>
               <th>Technician</th>
+              <th>Modified</th>
             </tr>
           </thead>
           <tbody>
@@ -25,12 +26,15 @@
                 <td>
                   <%= display.tech %>
                 </td>
-                <td>
-                  <%= display.phone %>
+                <!-- <td>
+                  display.phone
                 </td>
                 <td>
-                  <%= display.email %>
-                </li>                
+                   display.email
+                </td>            -->
+                <td>
+                  <input class="modified" type="text" name="edit" placeholder="Edit">
+                </td>     
               </tr>
             <% }) %>
           </tbody>
