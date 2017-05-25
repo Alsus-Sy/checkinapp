@@ -1,6 +1,5 @@
 <% include ./partials/header %>
 
-  <a type="button" class="btn btn-primary" href="displays/signin">Click Here To Check In</a>
     <div class="panel panel-default">
     <!-- Default panel contents -->
       <div class="panel-body">
@@ -9,15 +8,22 @@
           <thead>
             <tr>
               <th>Name</th>
+              <th>Phone</th>
+              <th>Email</th>
               <th>Service Type</th>
-              <th>Technician</th>
+              <th>Technician</th>              
             </tr>
           </thead>
           <tbody>
-            <% displays.forEach(function(display) { %>
                 <tr>
                 <td>
                   <%= display.name %>           
+                </td>                
+                <td>
+                  <%= display.phone %>
+                </td>
+                <td>
+                  <%= display.email %>
                 </td>
                 <td>
                   <%= display.service %>, <%= display.extraservice %>
@@ -26,18 +32,16 @@
                   <%= display.tech %>
                 </td>
                 <td>
-                <td>
-                  <a class="showlink" href="/displays/<%= display._id %>">More Info</a>
                 </td>                
               </tr>
-            <% }) %>
           </tbody>
         </table>
       </div>
+    </div>     
+      <a class="btn btn-lg btn-warning btn-block" href="/displays/<%= display._id %>/edit">Edit</a>
+      <a href="/displays" class="btn btn-primary">Go Back</a>
     </div>
 
-<div>
-  <li class="slideshow"></li>
-</div>   
+ 
 
 <% include ./partials/footer %>

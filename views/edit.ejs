@@ -1,24 +1,24 @@
 <% include ./partials/header %>
 
   <div class="row">
-    <h1 style="text-align: center">Please Check In</h1>
+    <h1 style="text-align: center">Edit <%= display.name %></h1>
     <div style="width: 80%; margin: 25px auto;">
-        <form action="/displays" method="post">
+        <form action="/displays/<%= display._id %>?_method=put" method="post">
             <div class="form-group">
                 <h3>Name</h3>
-                <input class="form-control" type="text" name="display[name]">
+                <input class="form-control" type="text" name="display[name]" value="<%= display.name %>">
             </div>
             <div class="form-group">
                 <h3>Phone</h3>
-                <input class="form-control" type="text" name="display[phone]">
+                <input class="form-control" type="text" name="display[phone]" value="<%= display.phone %>">
             </div>
             <div class="form-group">
                 <h3>Email</h3>
-                <input class="form-control" type="email" name="display[email]">
+                <input class="form-control" type="email" name="display[email]" value="<%= display.email %>">
             </div>
             <div class="form-group">
                 <h3>Services</h3>
-                <input class="form-control whiteSpace" type="text" list="servicesOption1" name="display[service]" placeholder="Click here for service" >
+                <input class="form-control whiteSpace" type="text" list="servicesOption1" name="display[service]" value="<%= display.service %>">
                 <datalist id="servicesOption1">
                   <option>Regular Pedicure</option>
                   <option>Deep Clean Pedicure</option>
@@ -43,7 +43,7 @@
                   <option>Eyebrow Tinting</option>
                   <option>Other</option>
                 </datalist>
-                <input class="form-control" type="text" list="servicesOption2" name="display[extraservice]" placeholder="Click here for service">
+                <input class="form-control" type="text" list="servicesOption2" name="display[extraservice]" value="<%= display.extraservice %>">
                 <datalist id="servicesOption2">
                   <option>Regular Pedicure</option>
                   <option>Deep Clean Pedicure</option>
@@ -71,7 +71,7 @@
             </div>
             <div class="form-group">
                 <h3>Technician</h3>
-                <input class="form-control" type="text" list="techChoice" name="display[tech]" placeholder="Click here to pick your favorite technician">
+                <input class="form-control" type="text" list="techChoice" name="display[tech]" value="<%= display.tech %>">
                 <datalist id="techChoice">
                   <option>Tech 1</option>
                   <option>Tech 2</option>
@@ -80,7 +80,7 @@
                 </datalist>
             </div>
             <div class="form-group">
-                <button class="btn btn-lg btn-success btn-block">Check In</button>
+                <button class="btn btn-lg btn-success btn-block">Modify</button>
             </div>
         </form>
         <a href="/displays" class="btn btn-primary">Go Back</a>

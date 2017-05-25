@@ -3,9 +3,36 @@ body {
   font-size: 2em;
 }
 
-.btn-primary {
-  margin-bottom: 15px;
+.form-control {
   font-size: 1.5em;
+  padding: 25px;
+}
+
+
+.btn-primary {
+  margin: 15px 0 15px 0;
+  font-size: 1.5em;
+}
+
+.btn-warning {
+  margin: 15px 0 15px 0;
+  font-size: 1.5em;
+}
+
+.whitebackground {
+  background: rgb(255, 255, 255);
+}
+
+.greentext {
+  color: green;
+}
+
+.redtext {
+  color: red;
+}
+
+.bluetext {
+  color: blue;
 }
 
 .btn-success {
@@ -20,12 +47,55 @@ body {
   margin: 10px 0 10px 0;
 }
 
+.brand {
+  text-align: center;
+}
+
 .display-3 {
   color: white;
   padding-left: 10px;
   display: inline-block;
 }
 
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background-image: url(http://3.bp.blogspot.com/-1XN9zFbcMvg/VgrbOYKkfjI/AAAAAAAAAcY/NNaY4_YDwCE/s1600/Nails%2Bbarcelona%2Bsalon.jpg);
+  opacity: 0.5; 
+}
+
+/*.slideshow { 
+  background-image: url(http://3.bp.blogspot.com/-1XN9zFbcMvg/VgrbOYKkfjI/AAAAAAAAAcY/NNaY4_YDwCE/s1600/Nails%2Bbarcelona%2Bsalon.jpg);
+  opacity: 0.5; 
+}*/
+
+.panel {
+  background: rgba(0, 0, 205, 0.3);
+  color: rgba(255, 255, 255, 1);
+}
+
+.showlink {
+  color: rgba(255, 255, 255, 1);
+}
+
+.showlink:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
 .modified {
   border: none;
+  background: rgba(168, 244, 255, 0.8);
 }
+
+.showPageButton {
+  text-align: center;
+}
+

@@ -5,7 +5,7 @@ var express        = require("express"),
     methodOverride = require("method-override");
 
 // APP CONFIG
-//mongoose.connect("mongodb://localhost/checkin_app");
+// mongoose.connect("mongodb://localhost/checkin_app");
 mongoose.connect("mongodb://admin17:admin19148@ds149431.mlab.com:49431/checkin");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
@@ -20,7 +20,7 @@ var displaySchema = new mongoose.Schema({
   email: String,
   service: String,
   extraservice: String,
-  tech: String  
+  tech: String
 });
 
 var Display = mongoose.model("Display", displaySchema);
@@ -31,11 +31,11 @@ app.get("/", function(req, res) {
 });
 
 //TEST DATA
-Display.remove({}, function(err) {
-  if (err) {
-    console.log(err);
-  }
-});
+// Display.remove({}, function(err) {
+//   if (err) {
+//     console.log(err);
+//   }
+// });
 //=========
 
 // === INDEX ===
@@ -66,6 +66,45 @@ app.post("/displays", function(req, res) {
     }
   });
 });
+
+// === SHOW ===
+app.get("/displays/:id", function(req, res) {
+  Display.findById(req.params.id, function(err, foundCustomer) {
+    if (err) {
+      res.redirect("/displays");
+    } else {
+      res.render("show", {display: foundCustomer});
+    }
+  });
+});
+
+
+
+// === EDIT ===
+app.get("/displays/:id/edit", function(req, res) {
+  Display.findById(req.params.id, function(err, foundCustomer) {
+    if (err) {
+      res.redirect("/displays");
+    } else {
+      res.render("edit", {display: foundCustomer});
+    }
+  });  
+});
+
+// === UPDATE ROUTE ===
+
+app.put("/displays/:id", function(req, res) {
+  Display.findByIdAndUpdate(req.params.id, req.body.display, function(err, updateCustomer) {
+      if (err) {
+        res.redirect("/displays");
+      } else {
+        res.redirect("/displays/" + req.params.id);
+      }
+  });
+});
+
+
+
 
 
 // === SERVER STARTING CONFIG
