@@ -16,8 +16,7 @@ app.use(methodOverride("_method"));
 // MONGOOSE/MODEL CONFIG
 var displaySchema = new mongoose.Schema({
   name: String,
-  phone: String,
-  email: String,
+  contact: String,
   service: String,
   extraservice: String,
   tech: String
@@ -102,9 +101,6 @@ app.put("/displays/:id", function(req, res) {
       }
   });
 });
-
-
-
 
 
 // === SERVER STARTING CONFIG

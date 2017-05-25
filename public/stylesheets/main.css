@@ -20,19 +20,26 @@ body {
 }
 
 .whitebackground {
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .greentext {
   color: green;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  padding-right: 10px;
 }
 
 .redtext {
   color: red;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
 }
 
 .bluetext {
   color: blue;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
 }
 
 .btn-success {
