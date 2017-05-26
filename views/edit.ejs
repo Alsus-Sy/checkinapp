@@ -1,5 +1,6 @@
 <% include ./partials/header %>
 
+  <a href="/displays" class="btn btn-info">Go Back</a>
   <div class="row">
     <h1 style="text-align: center">Edit <%= display.name %></h1>
     <div style="width: 80%; margin: 25px auto;">
@@ -66,20 +67,9 @@
                 </datalist>
             </div>
             <div class="form-group">
-                <h3>Technician</h3>
-                <input class="form-control" type="text" list="techChoice" name="display[tech]" value="<%= display.tech %>">
-                <datalist id="techChoice">
-                  <option>Tech 1</option>
-                  <option>Tech 2</option>
-                  <option>Tech 3</option>
-                  <option>Tech 4</option>
-                </datalist>
-            </div>
-            <div class="form-group">
                 <button class="btn btn-lg btn-success btn-block">Modify</button>
             </div>
         </form>
-        <a href="/displays" class="btn btn-primary">Go Back</a>
     </div>
   </div>
 

@@ -1,6 +1,6 @@
 <% include ./partials/header %>
 
-  <a type="button" class="btn btn-primary" href="displays/signin">Click Here To Check In</a>
+  <a type="button" class="btn btn-primary btn-block" href="displays/signin">Click Here To Check In</a>
     <div class="panel panel-default">
     <!-- Default panel contents -->
       <div class="panel-body">
@@ -10,7 +10,6 @@
             <tr>
               <th>Name</th>
               <th>Service Type</th>
-              <th>Technician</th>
             </tr>
           </thead>
           <tbody>
@@ -23,9 +22,6 @@
                   <%= display.service %>, <%= display.extraservice %>
                 </td>
                 <td>
-                  <%= display.tech %>
-                </td>
-                <td>
                 <td>
                   <a class="showlink" href="/displays/<%= display._id %>">More Info</a>
                 </td>                
@@ -34,24 +30,6 @@
           </tbody>
         </table>
       </div>
-    </div>   
-
-<div>
-  <li class="slideshow"></li>
-</div>   
-
-<script>
-  $(".showlink").click(function(){
-    var pass = prompt("Please enter password!!");
-    var passKey = "thanh123";
-    while (pass != passKey) {
-      pass = prompt("Please try again!");
-      if (pass == passKey) {
-        console.log();
-    }
-    }
-  });
-  
-</script> 
+    </div>    
 
 <% include ./partials/footer %>
