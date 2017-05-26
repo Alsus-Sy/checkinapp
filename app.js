@@ -19,7 +19,7 @@ var displaySchema = new mongoose.Schema({
   contact: String,
   service: String,
   extraservice: String,
-  tech: String
+  created: {type: Date, default: Date.now}
 });
 
 var Display = mongoose.model("Display", displaySchema);
@@ -99,6 +99,17 @@ app.put("/displays/:id", function(req, res) {
       } else {
         res.redirect("/displays/" + req.params.id);
       }
+  });
+});
+
+// === DELETE ROUTE ===
+app.delete("/displays/:id", function(req, res) {
+  Display.findByIdAndRemove(req.params.id, function(err) {
+    if (err) {
+      res.redirect("/displays");
+    } else {
+      res.redirect("/displays");
+    }
   });
 });
 

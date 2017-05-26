@@ -22,7 +22,6 @@
                   <%= display.service %>, <%= display.extraservice %>
                 </td>
                 <td>
-                <td>
                   <a class="showlink" href="/displays/<%= display._id %>">More Info</a>
                 </td>                
               </tr>
@@ -30,6 +29,19 @@
           </tbody>
         </table>
       </div>
-    </div>    
+    </div>
+
+<script>
+  $(".showlink").click(function(){
+    var pass = prompt("Please enter password!!");
+    var passKey = "thanh123";
+    while (pass != passKey) {
+      pass = prompt("Please try again!");
+      if (pass == passKey) {
+        console.log();
+    }
+  }
+});  
+</script>       
 
 <% include ./partials/footer %>

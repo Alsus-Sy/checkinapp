@@ -26,6 +26,11 @@ body {
 
 .btn-info {
   font-size: 1.5em;
+  margin: 10px 0 10px 0;
+}
+
+.btn-danger {
+  font-size: 1.5em;
 }
 
 .btn-warning {
@@ -90,7 +95,7 @@ body {
   padding: 0;
 
   background-image: url(http://3.bp.blogspot.com/-1XN9zFbcMvg/VgrbOYKkfjI/AAAAAAAAAcY/NNaY4_YDwCE/s1600/Nails%2Bbarcelona%2Bsalon.jpg);
-  opacity: 0.5; 
+  opacity: 1; 
 }
 
 /*.slideshow { 
@@ -99,7 +104,7 @@ body {
 }*/
 
 .panel {
-  background: rgba(0, 0, 205, 0.3);
+  background: rgba(0, 0, 205, 0.6);
   color: rgba(255, 255, 255, 1);
 }
 
