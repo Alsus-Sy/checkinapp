@@ -10,7 +10,9 @@
             <tr>
               <th>Name</th>
               <th>Phone or Email</th>
-              <th>Service Type</th>             
+              <th>Service Type</th>
+              <th>Technician</th>
+              <th>Date Check In</th>             
             </tr>
           </thead>
           <tbody>
@@ -25,7 +27,10 @@
                   <%= display.service %>, <%= display.extraservice %>
                 </td>
                 <td>
-                  <%= display.created.toLocaleDateString() %>
+                  <%= display.technician %>
+                </td>
+                <td>
+                  <%= display.created.toLocaleString() %>
                 </td>               
               </tr>
           </tbody>

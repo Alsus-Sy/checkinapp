@@ -19,6 +19,7 @@ var displaySchema = new mongoose.Schema({
   contact: String,
   service: String,
   extraservice: String,
+  technician: String,
   created: {type: Date, default: Date.now}
 });
 
