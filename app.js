@@ -5,8 +5,8 @@ var express        = require("express"),
     methodOverride = require("method-override");
 
 // APP CONFIG
-// mongoose.connect("mongodb://localhost/checkin_app");
-mongoose.connect("mongodb://admin17:admin19148@ds149431.mlab.com:49431/checkin");
+mongoose.connect("mongodb://localhost/checkin_app");
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -26,8 +26,10 @@ var displaySchema = new mongoose.Schema({
 var Display = mongoose.model("Display", displaySchema);
 
 // === RESTFUL ROUTES ===
-app.get("/", function(req, res) {
-  res.redirect("/displays");
+
+
+app.get("/", function(req, res) {   
+  res.redirect("/displays");  
 });
 
 //TEST DATA

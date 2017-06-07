@@ -12,19 +12,19 @@
               <th>Service Type</th>
             </tr>
           </thead>
-          <tbody>
-            <% displays.forEach(function(display) { %>
+          <tbody>            
+            <% displays.forEach(function(display) { %>                
                 <tr>
-                <td>
-                  <%= display.name %>           
-                </td>
+                <td>                              
+                  <%= display.name %>
+                </td> 
                 <td>
                   <%= display.service %>, <%= display.extraservice %>
                 </td>
                 <td>
                   <a class="showlink" href="/displays/<%= display._id %>">More Info</a>
-                </td>                
-              </tr>
+                </td>               
+              </tr>              
             <% }) %>
           </tbody>
         </table>
